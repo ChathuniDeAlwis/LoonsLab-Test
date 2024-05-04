@@ -1,0 +1,18 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Weather Forecast</title>  <!-- Sets the title of the webpage -->
+</head>
+<body>
+    <h2>Weather Forecast for Next 3 Days</h2>  <!-- Heading for the weather forecast -->
+    {% for day in forecast %}  <!-- Starts a loop over forecast data -->
+    <div>
+        <p>Date: {{ day.date }}</p>  <!-- Displays the date of the forecast dynamically from the forecast data -->
+        <p>Temperature: {{ day.temperature }}°C</p>  <!-- Displays the temperature dynamically from the forecast data -->
+        <p>Description: {{ day.description }}</p>  <!-- Displays the weather description dynamically from the forecast data -->
+    </div>
+    {% endfor %}  <!-- Ends the loop -->
+</body>
+</html>

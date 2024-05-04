@@ -1,0 +1,23 @@
+<!DOCTYPE html>  <!-- Declares the document type and version of HTML -->
+<html lang="en">  <!-- Specifies the language of the document -->
+<head>
+    <meta charset="UTF-8">  <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Sets the viewport for responsive design -->
+    <title>Weather App</title>  <!-- Sets the title of the webpage -->
+</head>
+<body>
+    <h1>Weather App</h1>  <!-- Heading for the weather application -->
+    <form action="/weather" method="post">  <!-- Form for getting weather by city name, sends data to '/weather' endpoint using POST method -->
+        <label for="city">Enter city name:</label>  <!-- Label for city input field -->
+        <input type="text" id="city" name="city" required>  <!-- Text input field for entering city name, required attribute makes it mandatory -->
+        <button type="submit">Get Weather</button>  <!-- Submit button to get weather -->
+    </form>
+    <form action="/forecast" method="post">  <!-- Form for getting weather forecast by latitude and longitude, sends data to '/forecast' endpoint using POST method -->
+        <label for="lat">Latitude:</label>  <!-- Label for latitude input field -->
+        <input type="text" id="lat" name="lat" required>  <!-- Text input field for entering latitude, required attribute makes it mandatory -->
+        <label for="lon">Longitude:</label>  <!-- Label for longitude input field -->
+        <input type="text" id="lon" name="lon" required>  <!-- Text input field for entering longitude, required attribute makes it mandatory -->
+        <button type="submit">Get Forecast</button>  <!-- Submit button to get forecast -->
+    </form>
+</body>
+</html>
